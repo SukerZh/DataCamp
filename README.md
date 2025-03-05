@@ -1,8 +1,15 @@
 # Engineering Machinery Data File Description
 ## Overview
+TODO: pitch
+- short intro
+- from data from partners in related industry + china bureau of statistics
+- task of this challenge
+- why it matters
+
 This document describes the structure and contents of an engineering machinery data file that integrates both input and output datasets. The file is designed to capture key metrics related to engineering machinery work hours at the city level and aggregate economic indicators at the province level. The time span covers the period from January 2020 to August 2023 for the input data and from 2020 to 2023 for the output data.
 
-## Input Data
+
+## Input Data Structure
 ### Data Source
   Scope: The input dataset contains data for three primary types of engineering machinery:
     Roller
@@ -62,3 +69,48 @@ The output dataset provides economic indicators aggregated at the provincial lev
   Time Alignment: Ensure proper alignment of dates when aggregating city-level input data to match the monthly or quarterly output data.
   Data Consistency: Validate consistency in city-to-province mappings and ensure that economic indicators accurately reflect the corresponding provinces.
   Missing Data: Identify and address any gaps in the time series to maintain the integrity of longitudinal analyses.
+
+## Getting started
+
+### Install
+
+To run a submission and the notebook you will need the dependencies listed
+in `requirements.txt`. You can install install the dependencies with the
+following command-line:
+
+```bash
+pip install -U -r requirements.txt
+```
+
+If you are using `conda`, we provide an `environment.yml` file for similar
+usage.
+
+### Challenge description
+
+Get started on this RAMP with the
+[dedicated notebook](template_starting_kit.ipynb).
+
+### Test a submission
+
+The submissions need to be located in the `submissions` folder. For instance
+for `my_submission`, it should be located in `submissions/my_submission`.
+
+To run a specific submission, you can use the `ramp-test` command line:
+
+```bash
+ramp-test --submission my_submission
+```
+
+You can get more information regarding this command line:
+
+```bash
+ramp-test --help
+```
+
+### To go further
+
+You can find more information regarding `ramp-workflow` in the
+[dedicated documentation](https://paris-saclay-cds.github.io/ramp-docs/ramp-workflow/stable/using_kits.html)
+
+
+
