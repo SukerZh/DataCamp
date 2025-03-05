@@ -1,12 +1,13 @@
 # Engineering Machinery Data File Description
-## Overview
-TODO: pitch
-- short intro
-- from data from partners in related industry + china bureau of statistics
-- task of this challenge
-- why it matters
+## Introduction
 
-This document describes the structure and contents of an engineering machinery data file that integrates both input and output datasets. The file is designed to capture key metrics related to engineering machinery work hours at the city level and aggregate economic indicators at the province level. The time span covers the period from January 2020 to August 2023 for the input data and from 2020 to 2023 for the output data.
+Infrastructure development is a key driver of economic growth, and the demand for construction machinery provides valuable insights into regional economic activity. By analyzing loan data for construction equipment, we can uncover patterns that indicate economic trends across different cities in China.
+
+The provided data is comes from industry partners and the China Bureau of Statistics over the timespan from January 2020 to August 2023, offering a unique opportunity to work with financial and economic indicators tied to infrastructure investments.
+
+Using loan data for construction machinery across various Chinese cities, you must predict regional economic growth. The challenge is to extract meaningful features and build robust predictive models that can anticipate economic shifts.
+
+Understanding economic trends at a city level is crucial for policymakers, businesses, and investors. A reliable predictive model could help financial institutions optimize lending strategies, aid governments in infrastructure planning, and provide businesses with insights into emerging market opportunities.
 
 
 ## Input Data Structure
