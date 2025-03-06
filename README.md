@@ -3,11 +3,11 @@
 
 Infrastructure development is a key driver of economic growth, and the demand for construction machinery provides valuable insights into regional economic activity. By analyzing loan data for construction equipment, we can uncover patterns that indicate economic trends across different cities in China.
 
+Using working hours data for construction machinery across various Chinese cities, you must predict regional economic growth. 
+
+This challenge is the usual work of economists. Understanding economic trends at a city level is crucial for policymakers, businesses, and investors. A reliable predictive model could help financial institutions optimize lending strategies, aid governments in infrastructure planning, and provide businesses with insights into emerging market opportunities.
+
 The provided data is comes from industry partners and the China Bureau of Statistics over the timespan from January 2020 to August 2023, offering a unique opportunity to work with financial and economic indicators tied to infrastructure investments.
-
-Using loan data for construction machinery across various Chinese cities, you must predict regional economic growth. The challenge is to extract meaningful features and build robust predictive models that can anticipate economic shifts.
-
-Understanding economic trends at a city level is crucial for policymakers, businesses, and investors. A reliable predictive model could help financial institutions optimize lending strategies, aid governments in infrastructure planning, and provide businesses with insights into emerging market opportunities.
 
 
 ## Input Data Structure
