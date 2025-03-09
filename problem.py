@@ -35,11 +35,11 @@ def _convert_dates(df):
     return df
 
 def _load_data(path):
-    df_crane = _process_csv(path, "crane_sum_quarterly.csv", "crane")
-    df_excavator = _process_csv(path, "excavator_sum_quarterly.csv", "excavator")
-    df_roller = _process_csv(path, "roller_sum_quarterly.csv", "roller")
+    df_crane = _process_csv(path, "crane_sum_quarterly.csv", "crane_work_hours")
+    df_excavator = _process_csv(path, "excavator_sum_quarterly.csv", "excavator_work_hours")
+    df_roller = _process_csv(path, "roller_sum_quarterly.csv", "roller_work_hours")
 
-    df_construction = _process_csv(path, "ConstructionTotalValueOutput.csv", "construction")
+    df_construction = _process_csv(path, "ConstructionTotalValueOutput.csv", "construction_total_revenue")
     df_construction = _convert_dates(df_construction)
 
     df_gdp = _process_csv(path, "GrossDomesticProduct.csv", "GDP")
@@ -52,7 +52,7 @@ def _load_data(path):
 
     return df #possibility: test / train split here and the read it with get_train_data and get_test_data
 
-_test_quarters = ["2020Q3", "2021Q2", "2022Q1", "2022Q4", "2023Q3"]  
+_test_quarters = ["2021Q2", "2022Q1", "2022Q4", "2023Q3"]  
 
 def get_train_data(path="."):
     df = _load_data(path)

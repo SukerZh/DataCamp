@@ -1,13 +1,19 @@
-
-from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
-from sklearn.linear_model import LogisticRegression
+from sklearn.svm import SVR
 
 
-def get_estimator():
-    pipe = make_pipeline(
-        StandardScaler(),
-        LogisticRegression()
-    )
+class Estimator:
+    def __init__(self):
+        self.model = SVR()
+        self.scalerX = StandardScaler()
+        self.scalerY = StandardScaler()
+    
+    def fit(self, X, y):
+        X_train = self.scalerX.fit_transform(X_train)
+        y_train = self.scalerY.fit_transform(y)
+        self.model.fit(X_train, y_train)
+        return self
 
-    return pipe
+    def predict(self, X):
+        y_pred_scaled = self.model.predict(X)
+        return self.scalerY.inverse_transform(y_pred_scaled)
