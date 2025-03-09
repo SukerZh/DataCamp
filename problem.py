@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 import os
 
-from sklearn.model_selection import StratifiedShuffleSplit
+from sklearn.model_selection import ShuffleSplit
 
 problem_title = 'Economic forecast based on machinery data'
 
@@ -22,7 +22,7 @@ score_types = [
 
 
 def get_cv(X, y):
-    cv = StratifiedShuffleSplit(n_splits=8, test_size=0.2, random_state=57)
+    cv = ShuffleSplit(n_splits=8, test_size=0.2, random_state=57)
     return cv.split(X, y)
 
 def _process_csv(path, f_name, col_name):
@@ -59,7 +59,7 @@ def get_train_data(path="."):
     df = df[~df.apply(lambda row: row['year_quarter'] in _test_quarters, axis=1)]
     y_array = df[_target_column_name].values
     X_df = df.drop([_target_column_name], axis=1)
-    return X_df, y_array
+    return X_df, y_array.reshape(-1,1)
 
 
 def get_test_data(path="."):
@@ -67,4 +67,4 @@ def get_test_data(path="."):
     df = df[df.apply(lambda row: row['year_quarter'] in _test_quarters, axis=1)]
     y_array = df[_target_column_name].values
     X_df = df.drop([_target_column_name], axis=1)
-    return X_df, y_array
+    return X_df, y_array.reshape(-1,1)
